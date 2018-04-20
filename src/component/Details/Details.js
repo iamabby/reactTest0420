@@ -6,20 +6,22 @@ import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 class Details extends React.Component {
 
-    constructor() {
+    constructor(props) {
         super();
         this.state = {
             details: [],
-
+            id:this.props.match.params.id
         }
+        console.log(this.state.id);
     }
     componentDidMount() {
-        axios.get("https://cnodejs.org/api/v1/topic/5433d5e4e737cbe96dcef312")
+        axios.get(`https://cnodejs.org/api/v1/topic/${this.state.id}`)
             .then((response) => {
-                console.log(response.data.data);
                 this.setState({
                     details: response.data.data.replies,
+
                 })
+                console.log( response.data.data.replies);
             })
             .then((error) => {
                 console.log(error);
@@ -34,6 +36,7 @@ class Details extends React.Component {
                         this.state.details.map((item, index) => {
                             return (
                                 <li key={index}>
+                                <h2>这就是内容</h2>
                                     <div className="list-title">{item.title}</div>
                                     <div className="date">{item.create_at}</div>
                                 </li>
