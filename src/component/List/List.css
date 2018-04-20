@@ -1,0 +1,32 @@
+.coop-block {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.coop-block .title {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: left;
+}
+.coop-block ul {
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+}
+.coop-block li {
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.coop-block li:last-child {
+  border-bottom: 0;
+}
+.coop-block .list-title {
+  font-size: 16px;
+  color: #000;
+}
+.coop-block .date {
+  margin-top: 8px;
+  font-size: 10px;
+  color: #999;
+}
