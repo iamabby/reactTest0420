@@ -30,3 +30,6 @@
   font-size: 10px;
   color: #999;
 }
+.coop-block a {
+  text-decoration: none;
+}
